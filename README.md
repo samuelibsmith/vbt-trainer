@@ -24,13 +24,16 @@ Built as a portfolio project for mechanical engineering graduate study.
 
 ## Hardware
 
-| Microcontroller | ESP32 DevKit v1 | ~$8 |
+| Microcontroller | ESP32 DevKit v1 | $9 | 
 
-| Encoder | Taiss 600PPR | ~$18 | 
+| Encoder | Taiss 600PPR | $18 | 
 
-| Display | SSD1306 0.96" OLED | ~$5 |
+| Display | SSD1306 0.96" OLED | $3 |
 
-| Battery | 3.7V 1000mAh LiPo | ~$8 |
+| Battery | Samsung 30Q 18650 3000mAh 15A Battery | $4 |
+
+| Battery Holder | Samsung 30Q 18650 3000mAh 15A Battery | $10 |
+
 
 Full BOM: [hardware/bom.csv](hardware/bom.csv)
 
