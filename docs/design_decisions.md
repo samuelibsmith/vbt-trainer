@@ -27,3 +27,9 @@ A running log of non-obvious choices made during the VBT build.
 **Decision:** Moving average with window size 5
 
 **Reason:** TBD — will tune empirically during calibration testing.
+
+## Spool: Ace Hardware 12' Tape Measure Spring-loaded spool
+
+**Decision:** Choosing an existing spring-loaded spool versus a custom design
+
+**Reason:** Tape measure retraction spools are a solved problem. The spring-loaded mechanism has plenty of power to retract a fishing line. The cost ~$9 is much more reasonable for a prototype than a custom design. 

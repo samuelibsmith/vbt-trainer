@@ -24,17 +24,16 @@ Built as a portfolio project for mechanical engineering graduate study.
 
 ## Hardware
 
-| Component | Part | Cost |
+| Microcontroller | ESP32 DevKit v1 | $9 | 
 
-|---|---|---|
+| Encoder | Taiss 600PPR | $18 | 
 
-| Microcontroller | ESP32-WROOM-32 | ~$8 |
+| Display | SSD1306 0.96" OLED | $3 |
 
-| Encoder | Signswise 600PPR | ~$10 |
+| Battery | Samsung 30Q 18650 3000mAh 15A Battery | $4 |
 
-| Display | SSD1306 0.96" OLED | ~$5 |
+| Battery Holder | Samsung 30Q 18650 3000mAh 15A Battery | $10 |
 
-| Battery | 3.7V 1000mAh LiPo | ~$8 |
 
 Full BOM: [hardware/bom.csv](hardware/bom.csv)
 
@@ -70,7 +69,7 @@ python python/serial_logger.py
 
 ## Build Log
 
-- [ ] Phase 1: Sensor validation
+- [X] Phase 1: Sensor validation
 
 - [ ] Phase 2: Firmware + Python pipeline
 
