@@ -12,9 +12,8 @@ import os
 # Paths to data
 raw_path = "data/sessions/2026-05-31_19-05_raw.csv"
 rep_path = "data/sessions/2026-05-31_19-05_reps.csv"
+
 # FUNCTIONS
-
-
 def initialize_data(raw_path, rep_path=None):
     """
     Loads raw sample and rep summary CSVs into pandas DataFrames.

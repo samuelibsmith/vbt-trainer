@@ -18,9 +18,9 @@
 
 #define SPOOL_CIRCUMFERENCE_MM (SPOOL_DIAMETER_MM * 3.14159)
 
-//#define MM_PER_PULSE (SPOOL_CIRCUMFERENCE_MM / (ENCODER_PPR * 4)) // x4 for quadrature
+#define MM_PER_PULSE (SPOOL_CIRCUMFERENCE_MM / (ENCODER_PPR * 4)) // x4 for quadrature
 
-#define MM_PER_PULSE (SPOOL_CIRCUMFERENCE_MM / (ENCODER_PPR * 2)) // x2 for 2 PPR
+// #define MM_PER_PULSE (SPOOL_CIRCUMFERENCE_MM / (ENCODER_PPR * 2)) // x2 for 2 PPR
 
 // ── Velocity calculation ──────────────────────────────
 
