@@ -43,7 +43,7 @@ def plot_session_velocity(raw_df, rep_df=None):
     Plots smoothed velocity over time for the entire set of reps
     (Optional: overlays rep detection markers)
     """
-    fig, ax = plt.subplots(figsize=(14,4))
+    fig, ax = plt.subplots(figsize=(8,4))
     # plot the smoothed and raw velocities
     ax.plot(raw_df['time_s'], raw_df['smooth_velocity'], linewidth=0.8, color='steelblue', label='Smoothed velocity')
     ax.plot(raw_df['time_s'], raw_df['raw_velocity'], linewidth=0.4, color='lightgray', alpha=0.6, label='Raw velocity')
@@ -68,8 +68,8 @@ def plot_session_velocity(raw_df, rep_df=None):
         end_time = rep_data['time_s'].max() # retrieves the largest time in the list for the rep
         ax.axvspan(start_time, end_time, alpha=0.25) # creates a vertical span over the rep with a 75% transparency
     
-        ax.set_ylabel('Velocity (m/s)')
-        ax.set_xlabel('Seconds')
+        ax.set_ylabel('Velocity (meters/second)')
+        ax.set_xlabel('Time (seconds')
 
     plt.show()
 
