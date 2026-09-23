@@ -22,7 +22,7 @@ Built as a portfolio project for mechanical engineering graduate study.
 
 [diagram here — add later]
 
-## Hardware
+## V1 Hardware
 
 | Microcontroller | ESP32 DevKit v1 | $9 | 
 
