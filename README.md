@@ -20,7 +20,7 @@ Built as a portfolio project for mechanical engineering graduate study.
 
 ## System Architecture
 
-[diagram here — add later]
+Currently Finalizing.
 
 ## V1 Hardware
 
@@ -71,9 +71,11 @@ python python/serial_logger.py
 
 - [X] Phase 1: Sensor validation
 
-- [ ] Phase 2: Firmware + Python pipeline
+- [X] Phase 2: Housing design prototype and hardware validation
 
-- [ ] Phase 3: Housing design and fabrication
+- [X] Phase 3: Firmware + Python pipeline
+
+- [ ] Phase 4: Hardware V2 with horizontal displacement detection
 
 - [ ] Phase 4: Phone app + dashboard
 
