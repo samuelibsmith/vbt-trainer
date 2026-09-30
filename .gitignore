@@ -1,3 +1,23 @@
+# PlatformIO
+.pio/
+firmware/.vscode/c_cpp_properties.json
+firmware/.vscode/launch.json
+
+# KiCad
+*.lck
+~*.lck
+.history/
+*-backups/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
 # Prerequisites
 *.d
 
