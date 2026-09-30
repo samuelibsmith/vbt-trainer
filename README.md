@@ -2,7 +2,8 @@
 
 A DIY velocity-based training (VBT) device that measures barbell speed in real time. A spring-loaded spool with a 600 PPR rotary encoder measures bar displacement, and an ESP32 turns that into velocity, rep metrics, an on-device display, BLE output, and CSV logs.
 
-<img width="898" height="1245" alt="IMG_3297" scsrc="https://github.com/user-attachments/assets/750e525b-e7e1-4ac2-8be5-ff30c8677d8b" />
+<img width="1796" height="2490" alt="IMG_3297" src="https://github.com/user-attachments/assets/36eba6ef-adbe-4eaa-8650-58084943535f" />
+
 
 ## What it does
 
