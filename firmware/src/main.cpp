@@ -80,7 +80,7 @@ float calculateVelocity() {
     unsigned long now = millis(); // Gets current time in ms
     long nowCount = encoder.getCount(); // Gets the current encoder pulse count
     unsigned long dt_ms = now - lastSampleTime; // Time delta between last sample (ms)
-    long dp = nowCount - lastPulseCount; // Pulses since last sample
+    long dp = (nowCount - lastPulseCount) * CONCENTRIC_SIGN; // Pulses since last sample
     // Update "last" values for next function call
     lastSampleTime = now;
     lastPulseCount = nowCount;
@@ -90,8 +90,8 @@ float calculateVelocity() {
     //Calculation is (meters/second) = pulses * mm/pulse * 1 meter / 1000 mm * 1000 ms/1s * 1/dt_ms
     float displacement_mm = dp * MM_PER_PULSE; //total mm moved
     float velocity_ms = (displacement_mm/1000.0)/(dt_ms/1000.0); //mm -> meters, ms -> seconds (meters/second)
-    //we want concentric or upward velocity, so we take the absolute value of velocity
-    return abs(velocity_ms);
+    //Given we only want the upward velocity, the velocity must have a sign to denote direction
+    return velocity_ms;
 }
 
 // logToSerial: logs the timestamp (ms), rawVelocity value, and smoothVel value in csv format
@@ -172,8 +172,7 @@ void setup(){
 
     // ENCODER
     ESP32Encoder::useInternalWeakPullResistors = puType::up; //enable internat pull-up resistors
-    encoder.attachHalfQuad(ENCODER_PIN_A, ENCODER_PIN_B);
-    //NOTE!! Currently using 2 ppr from config.h
+    encoder.attachFullQuad(ENCODER_PIN_A, ENCODER_PIN_B);
     encoder.setCount(0); // Zero the counter when starting up
     Serial.println("Encoder initialized on GPIO " + String(ENCODER_PIN_A) + "and" + String(ENCODER_PIN_B));
     //Initialized velocity buffer to be zero
@@ -219,9 +218,14 @@ void loop(){
 */
 void loop() {
     int buttonState = digitalRead(RESET_BUTTON_PIN); // Immediately reads 
-    if (buttonState == 0){
-        updateDisplay(0.00, 0, 0.00, 0);
+    if (buttonState == 0) {
         repCount = 0;
+        repInProgress = false;
+        meanConcentricVelo = 0.0;
+        peakVelocity = 0.0;
+        velocityLoss = 0.0;
+        setPeakVelocity = 0.0;
+        updateDisplay(0.00, 0, 0.00, 0);
     }
     unsigned long now = millis(); // Get current time once per loop iteration
     //TASK 1: Calculate velocity at 200Hz
@@ -300,7 +304,7 @@ void loop() {
     // Task 2: Send BLE update at 10Hz
     if (now - lastBLEUpdate >= (1000 / BLE_BROADCAST_HZ)) {
         lastBLEUpdate = now;
-        sendBleUpdate(meanConcentricVelo, repCount, peakVelocity, velocityLoss);
+        sendBleUpdate(smoothVelocity, repCount, meanConcentricVelo, velocityLoss);
     }
     
 }
