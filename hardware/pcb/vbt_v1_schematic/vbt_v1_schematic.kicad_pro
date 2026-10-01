@@ -409,11 +409,22 @@
     "reuse_designators": true,
     "subpart_first_id": 65,
     "subpart_id_separator": 0,
-    "top_level_sheets": [],
-    "used_designators": "",
+    "top_level_sheets": [
+      {
+        "filename": "vbt_v1_schematic.kicad_sch",
+        "name": "vbt_v1_schematic",
+        "uuid": "15cb1d3d-d59a-4988-96ee-ec5a5f46f3df"
+      }
+    ],
+    "used_designators": "U2,J1,#FLG1-6,R3-4,C1,BT1,Q1,F1,SW1-2,#PWR1-7",
     "variants": []
   },
-  "sheets": [],
+  "sheets": [
+    [
+      "15cb1d3d-d59a-4988-96ee-ec5a5f46f3df",
+      "vbt_v1_schematic"
+    ]
+  ],
   "text_variables": {},
   "tuning_profiles": {
     "meta": {
