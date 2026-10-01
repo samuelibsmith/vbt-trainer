@@ -51,7 +51,10 @@ Pins are defined in [`firmware/include/config.h`](firmware/include/config.h). Wi
 ## Getting started
 
 ### 1. Build the hardware
+1a. Circuitry
 Wire everything per the table above. Measure your own spool's effective diameter, because it sets the mm-per-count scale for every reading.
+1b. 3D-Printed Housing
+Unless you use the exact same tape measure internals from a (Ace 12 ft. L X 3/4 in. W Compact Tape Measure 1 pk), you will need to redesign both the key that translates torque from the spool to the encoder, and the spacing of encoder and the spool. The 3D model of the spool is a 3D replica of the actual spool, with the same measurements. If you order the same spool, the 3D-printed housing is good to go as is. 
 
 ### 2. Flash the firmware
 Requirements: VS Code with the PlatformIO extension (or the `pio` CLI).

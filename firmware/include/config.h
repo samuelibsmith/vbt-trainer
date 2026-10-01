@@ -28,6 +28,11 @@
 
 #define SMOOTHING_WINDOW  5       // Moving average window size (samples)
 
+#define CONCENTRIC_SIGN  1
+// Sign of the encoder count change when the bar moves UP (+1 or -1).
+// If velocity reads negative on the way up, flip this.
+
+
 // ── Rep detection ─────────────────────────────────────
 
 #define REP_START_VELOCITY  0.08  // m/s — velocity above this = concentric started
