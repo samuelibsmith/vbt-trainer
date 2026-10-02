@@ -8,7 +8,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": ""
+      "sch_revision": "1"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -412,17 +412,17 @@
     "top_level_sheets": [
       {
         "filename": "vbt_v1_schematic.kicad_sch",
-        "name": "vbt_v1_schematic",
+        "name": "Root",
         "uuid": "15cb1d3d-d59a-4988-96ee-ec5a5f46f3df"
       }
     ],
-    "used_designators": "U2,J1,#FLG1-6,R3-4,C1,BT1,Q1,F1,SW1-2,#PWR1-7",
+    "used_designators": "U1-5,#FLG1-5,J1,R1-3,#PWR1-4,#PWR8-9",
     "variants": []
   },
   "sheets": [
     [
       "15cb1d3d-d59a-4988-96ee-ec5a5f46f3df",
-      "vbt_v1_schematic"
+      "Root"
     ]
   ],
   "text_variables": {},
