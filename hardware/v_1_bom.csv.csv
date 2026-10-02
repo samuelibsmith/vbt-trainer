@@ -13,3 +13,5 @@ SW2,1,Momentary push button,,Reset button on GPIO 4,https://www.dfrobot.com/prod
 ,1,Spool and spring tether mechanism,37.47 mm effective diameter," Measure your own spool, but I linked the exact model here",https://www.acehardware.com/departments/tools/measure-and-marking-tools/tape-measures/2037164?store=12010&isMainPDPRequested=true
 ,1,"Perfboard or breadboard, hookup wire, connectors",,,
 ,1,External 18650 charger,,Charging is off-board in v1,
+,1,M3x4mm Heat Inserts,,,
+,1,M3 assorted screws socket cap head,,,
