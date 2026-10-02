@@ -27,7 +27,7 @@ A DIY velocity-based training (VBT) device that measures barbell speed in real t
 | Battery Holder | Samsung 30Q 18650 3000mAh 15A Battery | $10 |
 
 
-Full list: [`hardware/bom.csv`](hardware/v_1_bom.csv)
+Full list: [`hardware/v_1_bom.csv`](hardware/v_1_bom.csv)
 
 ## Wiring
 
