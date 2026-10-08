@@ -3,11 +3,18 @@
 firmware/.vscode/c_cpp_properties.json
 firmware/.vscode/launch.json
 
+
+
 # KiCad
 *.lck
 ~*.lck
 .history/
 *-backups/
+_restore_backup*/
+*.lck
+_autosave-*
+fp-info-cache
+*.kicad_prl
 
 # Python
 __pycache__/
@@ -87,3 +94,21 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+# KiCad
+.history/
+_restore_backup*/
+*.lck
+*-backups/
+_autosave-*
+fp-info-cache
+*.kicad_prl
+
+# KiCad
+.history/
+_restore_backup*/
+*.lck
+*-backups/
+_autosave-*
+fp-info-cache
+*.kicad_prl

@@ -641,11 +641,22 @@
     "reuse_designators": true,
     "subpart_first_id": 65,
     "subpart_id_separator": 0,
-    "top_level_sheets": [],
-    "used_designators": "",
+    "top_level_sheets": [
+      {
+        "filename": "vbt_kicad_pcb.kicad_sch",
+        "name": "Root",
+        "uuid": "7410dbc4-7d20-436b-9bb7-9ca64b6127ac"
+      }
+    ],
+    "used_designators": "R6-7,J2-4",
     "variants": []
   },
-  "sheets": [],
+  "sheets": [
+    [
+      "7410dbc4-7d20-436b-9bb7-9ca64b6127ac",
+      "Root"
+    ]
+  ],
   "text_variables": {},
   "tuning_profiles": {
     "meta": {
