@@ -648,13 +648,17 @@
         "uuid": "7410dbc4-7d20-436b-9bb7-9ca64b6127ac"
       }
     ],
-    "used_designators": "R6-8,J2-4,#PWR3-4,D1",
+    "used_designators": "BT1,#PWR4-16,J5-7,SW3",
     "variants": []
   },
   "sheets": [
     [
       "7410dbc4-7d20-436b-9bb7-9ca64b6127ac",
       "Root"
+    ],
+    [
+      "08ced4ac-dcde-4bd6-8803-f43fda8b2e55",
+      "Power_Wiring_OffBoard"
     ]
   ],
   "text_variables": {},
