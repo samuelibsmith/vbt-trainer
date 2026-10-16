@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "VBT_parts") (type "KiCad") (uri "C:/Users/sibsm/Documents/vbt-trainer/hardware/pcb/VBT_parts.pretty") (options "") (descr ""))
+)

@@ -2654,6 +2654,12 @@
 		(uuid "7e07a801-9047-4e20-aecb-086ae397af88")
 	)
 	(junction
+		(at 289.56 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "82fe6c61-c7ed-48f3-a584-16c2940cf825")
+	)
+	(junction
 		(at 191.77 50.8)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2672,10 +2678,22 @@
 		(uuid "ac1afba8-c682-4cba-aa1c-8c0031208c34")
 	)
 	(junction
+		(at 287.02 116.84)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ba5acec8-4c24-4356-853c-b57e447dc4bd")
+	)
+	(junction
 		(at 246.38 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c8f62d33-b9d4-497d-a845-0da795562a21")
+	)
+	(junction
+		(at 226.06 125.73)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c9ac4722-d8c8-40d9-a7ff-166e4b5b4c9d")
 	)
 	(junction
 		(at 246.38 50.8)
@@ -2824,6 +2842,16 @@
 			(type default)
 		)
 		(uuid "0b3c2907-92fa-42b9-af11-3757ca8c8af9")
+	)
+	(wire
+		(pts
+			(xy 289.56 140.97) (xy 303.53 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0cd9145d-8482-49e5-8708-42ed15fe2723")
 	)
 	(wire
 		(pts
@@ -3077,7 +3105,17 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 125.73) (xy 270.51 125.73)
+			(xy 226.06 125.73) (xy 270.51 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7739fdd8-55b2-4430-9269-aa7805ccb6a3")
+	)
+	(wire
+		(pts
+			(xy 156.21 125.73) (xy 226.06 125.73)
 		)
 		(stroke
 			(width 0)
@@ -3257,6 +3295,16 @@
 	)
 	(wire
 		(pts
+			(xy 287.02 138.43) (xy 287.02 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b40cd566-50b2-4c4d-ac6c-aefaa0cc2618")
+	)
+	(wire
+		(pts
 			(xy 255.27 91.44) (xy 289.56 91.44)
 		)
 		(stroke
@@ -3367,6 +3415,16 @@
 	)
 	(wire
 		(pts
+			(xy 303.53 138.43) (xy 287.02 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e09a5b5a-1ff7-41e7-9049-005b3cdeeed6")
+	)
+	(wire
+		(pts
 			(xy 246.38 88.9) (xy 302.26 88.9)
 		)
 		(stroke
@@ -3437,6 +3495,16 @@
 	)
 	(wire
 		(pts
+			(xy 289.56 119.38) (xy 289.56 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fcdb6f6d-0408-4570-b3c6-fd42e20e6bb6")
+	)
+	(wire
+		(pts
 			(xy 287.02 93.98) (xy 287.02 116.84)
 		)
 		(stroke
@@ -3446,7 +3514,7 @@
 		(uuid "ff8747ec-a3e4-4d5a-8c36-fee1c649765e")
 	)
 	(label "ESP_RX"
-		(at 295.91 76.2 90)
+		(at 293.37 78.74 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3476,7 +3544,7 @@
 		(uuid "2ff3fef0-f8ac-4848-9f8e-25df82cc32c9")
 	)
 	(label "ESP_TX"
-		(at 293.37 78.74 90)
+		(at 295.91 76.2 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3591,7 +3659,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 224.79 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -3645,6 +3713,94 @@
 			(project "vbt_kicad_pcb"
 				(path "/7410dbc4-7d20-436b-9bb7-9ca64b6127ac"
 					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 308.61 140.97 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "13f311f9-97f8-4471-83e0-dc9b71b31584")
+		(property "Reference" "J8"
+			(at 311.15 140.9699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x04"
+			(at 311.15 143.5099 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical"
+			(at 308.61 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 308.61 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 308.61 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e7c650d5-0382-46a0-9c54-3d0ef5b99ad8")
+		)
+		(pin "4"
+			(uuid "82d2e83c-04f8-4b74-a35c-750c5b36404d")
+		)
+		(pin "3"
+			(uuid "6e90e299-3cce-44a3-83fc-e8ed405c2db9")
+		)
+		(pin "2"
+			(uuid "d8bff4d0-bed1-4a24-84e4-9ca0a8618508")
+		)
+		(instances
+			(project "vbt_kicad_pcb"
+				(path "/7410dbc4-7d20-436b-9bb7-9ca64b6127ac"
+					(reference "J8")
 					(unit 1)
 				)
 			)
@@ -4019,7 +4175,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
+		(property "Footprint" "VBT_parts:SW_Tactile_SCHURTER_LSH_6x6mm"
 			(at 265.43 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -4144,6 +4300,85 @@
 			(project "vbt_kicad_pcb"
 				(path "/7410dbc4-7d20-436b-9bb7-9ca64b6127ac"
 					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 303.53 143.51 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "44b7829c-bee7-4d71-9cd2-ba56029648a8")
+		(property "Reference" "#PWR018"
+			(at 307.34 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 299.72 143.5099 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 303.53 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 303.53 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 303.53 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7e8f6f57-dc57-47a0-a7c8-e1e9ef14f325")
+		)
+		(instances
+			(project "vbt_kicad_pcb"
+				(path "/7410dbc4-7d20-436b-9bb7-9ca64b6127ac"
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -5456,7 +5691,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
+		(property "Footprint" "VBT_parts:SW_Tactile_SCHURTER_LSH_6x6mm"
 			(at 139.7 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -6008,6 +6243,84 @@
 			(project "vbt_kicad_pcb"
 				(path "/7410dbc4-7d20-436b-9bb7-9ca64b6127ac"
 					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 303.53 146.05 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ee8d72d5-af3d-4904-90d1-80fcac4e9730")
+		(property "Reference" "#PWR019"
+			(at 303.53 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 303.53 151.13 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 303.53 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 303.53 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 303.53 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a7f3ace1-21b1-43e3-9463-5d97d44ae8e8")
+		)
+		(instances
+			(project "vbt_kicad_pcb"
+				(path "/7410dbc4-7d20-436b-9bb7-9ca64b6127ac"
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
