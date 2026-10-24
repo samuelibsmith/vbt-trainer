@@ -3643,6 +3643,16 @@
 		)
 		(uuid "9ac0ab21-f7b1-4feb-a418-656134f5d410")
 	)
+	(label "+5V"
+		(at 299.72 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d565f534-dd4e-49dd-9101-1b4d7f2763e6")
+	)
 	(label "VBAT_SENSE"
 		(at 214.63 111.76 0)
 		(effects
