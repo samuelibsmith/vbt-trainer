@@ -35,6 +35,7 @@ def initialize_data(raw_path, rep_path=None):
         (raw_df, rep_df) - rep_df is None if no rep file was given or found.
         raw_df gains a 'time_s' column: seconds since the first sample.
     """
+    
     raw_df = pd.read_csv(raw_path)
     raw_df["time_s"] = (raw_df["timestamp_ms"] - raw_df["timestamp_ms"].iloc[0]) / 1000.0
 

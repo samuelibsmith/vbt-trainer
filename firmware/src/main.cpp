@@ -3,21 +3,29 @@
 sibsmith@bu.edu | sibsmith.ithaca@gmail.com
 */
 #include <Arduino.h> // Core: pinMode, digitalRead, millis, Serial
-#include <ESP32Encoder.h> // Harware pulse counter -- performs better than interrupts
 #include <Adafruit_GFX.h>      // Graphics base library for OLED
 #include <Adafruit_SSD1306.h>  // OLED driver
 #include <Wire.h> //I2C protocol -- needed for OLED
 #include <NimBLEDevice.h> // Bluetooth Low Energy
 #include "config.h" //imports custom pin definitions and constants
+#include "sensor.h" //imports Sensor Class
+#include "sensor_quad.h" //Import Encoder Quadrature Sensor Class
 
-ESP32Encoder encoder;
+// Replace the global "ESP32Encoder encoder;" with this.
+// Read it in two halves:
+//   - "QuadSensor(...)" builds the real object, calibration included.
+//   - "SpoolSensor* sensor" is a pointer: a variable that holds the
+//     object, but labelled only as "some SpoolSensor". main.cpp never
+//     needs to know it is specifically a QuadSensor, which is the
+//     whole point: swapping sensors later means changing this one line.
+SpoolSensor* sensor = new QuadSensor(MM_PER_PULSE, CONCENTRIC_SIGN);
 
 // Velocity Tracking
 float velocityBuffer[SMOOTHING_WINDOW]; //Circular buffer for moving average
 int bufferIndex = 0; //Index for tracking buffer position
 float smoothVelocity = 0.0; //Value of the smoothed velocity
 float peakVelocity = 0.0; //Highest velocity in the calculated rep window
-long lastPulseCount = 0; //Encoder count at last velocity sample
+float lastDisplacementMM = 0.0; //Records the last displacement in mm
 unsigned long lastSampleTime = 0; //Timestamp of last velocity sample (ms)
 
 // Rep detection
@@ -33,6 +41,14 @@ unsigned long repStartTime = 0; // When this rep started (ms)
 // Session Tracking
 float setPeakVelocity = 0.0; // MCV of the rep with the highest velocity (to calculate velocity loss %)
 float velocityLoss = 0.0; // Signed percent change from peak rep to most recent rep
+
+//Reset Button
+int lastButtonReading = HIGH;      // Raw pin reading last loop. INPUT_PULLUP means HIGH = not pressed
+int stableButtonState = HIGH;      // Debounced reading: only changes after DEBOUNCE_MS of stability
+unsigned long lastDebounceTime = 0; // When the raw reading last changed (ms)
+unsigned long pressStartTime = 0;   // When the current press began (ms)
+bool clearFired = false;            // Has the clear already fired for this press?
+
 // OLED 
 Adafruit_SSD1306 display(128, 64, &Wire, -1);
 
@@ -60,6 +76,7 @@ class ServerCallbacks : public NimBLEServerCallbacks {
     }
 };
 
+
 void setupBLE(){
     NimBLEDevice::init(BLE_DEVICE_NAME);  // Initialize with your device name
     bleServer = NimBLEDevice::createServer();
@@ -78,20 +95,17 @@ void setupBLE(){
 // calculateVelocity: Returns raw velocity in m/s when called every 200Hz/5ms in loop()
 float calculateVelocity() {
     unsigned long now = millis(); // Gets current time in ms
-    long nowCount = encoder.getCount(); // Gets the current encoder pulse count
+    float nowMM = sensor->displacementMM(); // Gets the current displacement in (mm)
     unsigned long dt_ms = now - lastSampleTime; // Time delta between last sample (ms)
-    long dp = (nowCount - lastPulseCount) * CONCENTRIC_SIGN; // Pulses since last sample
+    float dmm = nowMM - lastDisplacementMM; // mm moved since the last sample
     // Update "last" values for next function call
     lastSampleTime = now;
-    lastPulseCount = nowCount;
+    lastDisplacementMM = nowMM;
     //Safeguard: if not time has passed, avoide devide-by-zero error
     if (dt_ms == 0) return 0.0;
     //Convert pulses to mm and milliseconds to seconds to get velocity
-    //Calculation is (meters/second) = pulses * mm/pulse * 1 meter / 1000 mm * 1000 ms/1s * 1/dt_ms
-    float displacement_mm = dp * MM_PER_PULSE; //total mm moved
-    float velocity_ms = (displacement_mm/1000.0)/(dt_ms/1000.0); //mm -> meters, ms -> seconds (meters/second)
-    //Given we only want the upward velocity, the velocity must have a sign to denote direction
-    return velocity_ms;
+    //ensures to return m/s as the units (meters/second) = (1m / 1000.0 mm) / (1s / 1000.0ms)
+     return (dmm / 1000.0) / (dt_ms / 1000.0);
 }
 
 // logToSerial: logs the timestamp (ms), rawVelocity value, and smoothVel value in csv format
@@ -162,6 +176,39 @@ float smoothVelocityReading(float newSample){
     return sum/SMOOTHING_WINDOW;
 }
 
+// resetButtonCleared: call once per loop. Returns true exactly once,
+// at the moment a press crosses the RESET_HOLD_MS threshold.
+bool resetButtonCleared() {
+    int reading = digitalRead(RESET_BUTTON_PIN);
+    unsigned long now = millis();
+
+    // If the raw reading changed (a press, a release, or a bounce),
+    // restart the stability timer and remember the new reading.
+    if (reading != lastButtonReading) {
+        lastDebounceTime = now;
+        lastButtonReading = reading;
+    }
+
+    // Only accept the reading as the real state once it has stayed
+    // the same for DEBOUNCE_MS. Bounces die here: they never last 30 ms.
+    if ((now - lastDebounceTime) > DEBOUNCE_MS && reading != stableButtonState) {
+        stableButtonState = reading;
+        if (stableButtonState == LOW) {  // A genuine press just started
+            pressStartTime = now;
+            clearFired = false;
+        }
+    }
+
+    // Fire once when the hold is long enough. clearFired stops it
+    // re-firing on every loop for the rest of the hold.
+    if (stableButtonState == LOW && !clearFired && (now - pressStartTime) >= RESET_HOLD_MS) {
+        clearFired = true;
+        return true;
+    }
+    return false;
+}
+
+
 
 void setup(){
     //_________________________ SERIAL _________________________
@@ -169,12 +216,10 @@ void setup(){
     Serial.println("VBT Trainer starting...");
     //_________________________ BUTTON _________________________
     pinMode(RESET_BUTTON_PIN, INPUT_PULLUP);
+    // Initialize the rotation sensors
+    sensor->begin();
 
-    // ENCODER
-    ESP32Encoder::useInternalWeakPullResistors = puType::up; //enable internat pull-up resistors
-    encoder.attachFullQuad(ENCODER_PIN_A, ENCODER_PIN_B);
-    encoder.setCount(0); // Zero the counter when starting up
-    Serial.println("Encoder initialized on GPIO " + String(ENCODER_PIN_A) + "and" + String(ENCODER_PIN_B));
+    Serial.println("Sensor: " + String(sensor->name()));    
     //Initialized velocity buffer to be zero
     for (int i=0; i<SMOOTHING_WINDOW; i++){
         velocityBuffer[i] = 0.0;
@@ -216,9 +261,8 @@ void loop(){
     delay(100);
 } 
 */
-void loop() {
-    int buttonState = digitalRead(RESET_BUTTON_PIN); // Immediately reads 
-    if (buttonState == 0) {
+void loop() { 
+    if (resetButtonCleared()) {
         repCount = 0;
         repInProgress = false;
         meanConcentricVelo = 0.0;

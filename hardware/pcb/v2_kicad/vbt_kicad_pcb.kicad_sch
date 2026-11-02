@@ -2365,145 +2365,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:+5V"
-			(power global)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "+5V"
-				(at 0 3.556 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"+5V\""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "+5V_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+5V_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:GND"
 			(power global)
 			(pin_numbers
@@ -2782,12 +2643,6 @@
 		(uuid "316183e4-d21b-46af-a6a2-cdb04ab45ce1")
 	)
 	(junction
-		(at 238.76 86.36)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "317cb294-bb4b-4156-989f-92fce11d7e54")
-	)
-	(junction
 		(at 238.76 50.8)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2836,16 +2691,16 @@
 		(uuid "ac1afba8-c682-4cba-aa1c-8c0031208c34")
 	)
 	(junction
+		(at 246.38 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b70a7419-c67d-4011-abb9-e10485379893")
+	)
+	(junction
 		(at 287.02 116.84)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ba5acec8-4c24-4356-853c-b57e447dc4bd")
-	)
-	(junction
-		(at 246.38 88.9)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c8f62d33-b9d4-497d-a845-0da795562a21")
 	)
 	(junction
 		(at 226.06 125.73)
@@ -2858,6 +2713,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cfd0f446-bd47-4fef-bb8a-9013ee765b97")
+	)
+	(junction
+		(at 238.76 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e36409aa-3b8a-459f-b472-30c6b3d69434")
 	)
 	(junction
 		(at 191.77 121.92)
@@ -2969,6 +2830,16 @@
 	)
 	(wire
 		(pts
+			(xy 241.3 177.8) (xy 241.3 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "055e3260-6c47-4aa1-ad1c-23d1b6e347b6")
+	)
+	(wire
+		(pts
 			(xy 207.01 91.44) (xy 255.27 91.44)
 		)
 		(stroke
@@ -3039,6 +2910,16 @@
 	)
 	(wire
 		(pts
+			(xy 297.18 91.44) (xy 302.26 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24493ecc-f20b-4d65-9249-fbbb9e460488")
+	)
+	(wire
+		(pts
 			(xy 119.38 50.8) (xy 130.81 50.8)
 		)
 		(stroke
@@ -3059,7 +2940,7 @@
 	)
 	(wire
 		(pts
-			(xy 243.84 163.83) (xy 243.84 175.26)
+			(xy 243.84 163.83) (xy 243.84 177.8)
 		)
 		(stroke
 			(width 0)
@@ -3099,7 +2980,7 @@
 	)
 	(wire
 		(pts
-			(xy 246.38 170.18) (xy 246.38 175.26)
+			(xy 246.38 170.18) (xy 246.38 177.8)
 		)
 		(stroke
 			(width 0)
@@ -3349,16 +3230,6 @@
 	)
 	(wire
 		(pts
-			(xy 299.72 91.44) (xy 302.26 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "84c3f8b7-1699-4349-9569-25d347e1f401")
-	)
-	(wire
-		(pts
 			(xy 207.01 58.42) (xy 215.9 58.42)
 		)
 		(stroke
@@ -3416,6 +3287,16 @@
 			(type default)
 		)
 		(uuid "929ddd97-2ec4-4416-aa31-27d4413eabe3")
+	)
+	(wire
+		(pts
+			(xy 248.92 170.18) (xy 248.92 177.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94225d78-b12b-4a46-b2f0-88a95515ffd4")
 	)
 	(wire
 		(pts
@@ -3566,16 +3447,6 @@
 			(type default)
 		)
 		(uuid "bf2fe026-a4aa-49d9-8ea3-0b86d1e869d2")
-	)
-	(wire
-		(pts
-			(xy 248.92 170.18) (xy 248.92 175.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cc8e3066-9a9c-4128-83ba-c32ed61e2237")
 	)
 	(wire
 		(pts
@@ -3787,6 +3658,16 @@
 		)
 		(uuid "2ff3fef0-f8ac-4848-9f8e-25df82cc32c9")
 	)
+	(label "+5V"
+		(at 297.18 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "389b4ad0-619e-4553-8256-744873008a54")
+	)
 	(label "ESP_TX"
 		(at 295.91 76.2 90)
 		(effects
@@ -3846,6 +3727,16 @@
 			(justify left bottom)
 		)
 		(uuid "9ac0ab21-f7b1-4feb-a418-656134f5d410")
+	)
+	(label "+5V"
+		(at 248.92 170.18 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c5fd02a7-ca52-4be5-b497-7a55bd0babd2")
 	)
 	(label "VBAT_SENSE"
 		(at 214.63 111.76 0)
@@ -3967,85 +3858,6 @@
 			(project "vbt_kicad_pcb"
 				(path "/7410dbc4-7d20-436b-9bb7-9ca64b6127ac"
 					(reference "D1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 299.72 91.44 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "09959df5-b271-494f-87e9-c564fdd92dec")
-		(property "Reference" "#PWR05"
-			(at 303.53 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+5V"
-			(at 295.91 91.4399 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 299.72 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 299.72 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 299.72 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "85777657-f60e-475a-9a78-26212bc2ba13")
-		)
-		(instances
-			(project "vbt_kicad_pcb"
-				(path "/7410dbc4-7d20-436b-9bb7-9ca64b6127ac"
-					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -5347,85 +5159,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 248.92 170.18 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8cc27ac7-aaaf-4176-9338-36c21e93bbc2")
-		(property "Reference" "#PWR06"
-			(at 245.11 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+5V"
-			(at 252.73 170.1799 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 248.92 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 248.92 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 248.92 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a92c42b9-34b3-4c15-8e79-798e85115b63")
-		)
-		(instances
-			(project "vbt_kicad_pcb"
-				(path "/7410dbc4-7d20-436b-9bb7-9ca64b6127ac"
-					(reference "#PWR06")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:PWR_FLAG")
 		(at 191.77 50.8 0)
 		(unit 1)
@@ -6397,7 +6130,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x04")
-		(at 246.38 180.34 270)
+		(at 246.38 182.88 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6408,16 +6141,6 @@
 		(fields_autoplaced yes)
 		(uuid "eba8e190-9ea1-4834-bd9e-47eeb2945c6d")
 		(property "Reference" "J4"
-			(at 245.11 184.15 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Power Connector"
 			(at 245.11 186.69 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6427,8 +6150,18 @@
 				)
 			)
 		)
+		(property "Value" "Power Connector"
+			(at 245.11 189.23 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Footprint" "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical"
-			(at 246.38 180.34 0)
+			(at 246.38 182.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6439,7 +6172,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 246.38 180.34 0)
+			(at 246.38 182.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6450,7 +6183,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 246.38 180.34 0)
+			(at 246.38 182.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6855,7 +6588,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 221.9452 171.45 0)
 			(hide yes)
 			(show_name no)

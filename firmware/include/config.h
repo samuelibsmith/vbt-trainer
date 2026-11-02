@@ -61,4 +61,8 @@
 
 // ── Button ───────────────────────────────────────────
 
-#define RESET_BUTTON_PIN 4 
+#define RESET_BUTTON_PIN 4
+
+#define RESET_HOLD_MS   2000   // Hold this long to clear stats
+
+#define DEBOUNCE_MS     30     // Ignore signal changes shorter than this
