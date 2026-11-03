@@ -598,12 +598,42 @@
           "label": "Datasheet",
           "name": "Datasheet",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Type",
+          "name": "Sim.Type",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Device",
+          "name": "Sim.Device",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": true,
-      "name": "Default Editing",
+      "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
     },
@@ -648,7 +678,7 @@
         "uuid": "7410dbc4-7d20-436b-9bb7-9ca64b6127ac"
       }
     ],
-    "used_designators": "#PWR5-6,#PWR21",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [

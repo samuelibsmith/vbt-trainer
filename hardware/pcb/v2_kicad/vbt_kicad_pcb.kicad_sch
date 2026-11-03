@@ -5260,7 +5260,7 @@
 			)
 		)
 		(property "Value" "Serial Connector"
-			(at 308.61 78.74 0)
+			(at 309.88 79.248 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
