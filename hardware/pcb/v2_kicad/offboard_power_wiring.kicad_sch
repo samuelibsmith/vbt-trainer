@@ -2290,7 +2290,7 @@
 			(uuid "ca3801db-3e74-4cd5-9f45-cb57a19ad8a1")
 		)
 		(instances
-			(project "vbt_kicad_pcb"
+			(project "vbt_kicad_pcb_TOUCHSCREEN"
 				(path "/7410dbc4-7d20-436b-9bb7-9ca64b6127ac/08ced4ac-dcde-4bd6-8803-f43fda8b2e55"
 					(reference "#PWR011")
 					(unit 1)
@@ -2375,7 +2375,7 @@
 			(uuid "e3bdc895-e1d8-4da1-83b1-cb690c551e78")
 		)
 		(instances
-			(project "vbt_kicad_pcb"
+			(project "vbt_kicad_pcb_TOUCHSCREEN"
 				(path "/7410dbc4-7d20-436b-9bb7-9ca64b6127ac/08ced4ac-dcde-4bd6-8803-f43fda8b2e55"
 					(reference "J7")
 					(unit 1)
@@ -2453,7 +2453,7 @@
 			(uuid "6a69d9df-3035-490d-954e-fe7adb250171")
 		)
 		(instances
-			(project "vbt_kicad_pcb"
+			(project "vbt_kicad_pcb_TOUCHSCREEN"
 				(path "/7410dbc4-7d20-436b-9bb7-9ca64b6127ac/08ced4ac-dcde-4bd6-8803-f43fda8b2e55"
 					(reference "#PWR012")
 					(unit 1)
@@ -2532,7 +2532,7 @@
 			(uuid "5ba83a36-beda-4472-8b58-b49545401497")
 		)
 		(instances
-			(project "vbt_kicad_pcb"
+			(project "vbt_kicad_pcb_TOUCHSCREEN"
 				(path "/7410dbc4-7d20-436b-9bb7-9ca64b6127ac/08ced4ac-dcde-4bd6-8803-f43fda8b2e55"
 					(reference "#PWR015")
 					(unit 1)
@@ -2613,7 +2613,7 @@
 			(uuid "34985f88-22b3-494c-8fa5-d2348a25d737")
 		)
 		(instances
-			(project "vbt_kicad_pcb"
+			(project "vbt_kicad_pcb_TOUCHSCREEN"
 				(path "/7410dbc4-7d20-436b-9bb7-9ca64b6127ac/08ced4ac-dcde-4bd6-8803-f43fda8b2e55"
 					(reference "F1")
 					(unit 1)
@@ -2699,7 +2699,7 @@
 			(uuid "b80a780b-9b86-4763-8389-f5b563963121")
 		)
 		(instances
-			(project "vbt_kicad_pcb"
+			(project "vbt_kicad_pcb_TOUCHSCREEN"
 				(path "/7410dbc4-7d20-436b-9bb7-9ca64b6127ac/08ced4ac-dcde-4bd6-8803-f43fda8b2e55"
 					(reference "Q1")
 					(unit 1)
@@ -2781,7 +2781,7 @@
 			(uuid "b11ff2a8-5993-4818-919d-1f17f91abded")
 		)
 		(instances
-			(project "vbt_kicad_pcb"
+			(project "vbt_kicad_pcb_TOUCHSCREEN"
 				(path "/7410dbc4-7d20-436b-9bb7-9ca64b6127ac/08ced4ac-dcde-4bd6-8803-f43fda8b2e55"
 					(reference "SW3")
 					(unit 1)
@@ -2859,7 +2859,7 @@
 			(uuid "1125b65b-7876-4b88-81d1-8e410b24d65a")
 		)
 		(instances
-			(project "vbt_kicad_pcb"
+			(project "vbt_kicad_pcb_TOUCHSCREEN"
 				(path "/7410dbc4-7d20-436b-9bb7-9ca64b6127ac/08ced4ac-dcde-4bd6-8803-f43fda8b2e55"
 					(reference "#PWR013")
 					(unit 1)
@@ -2953,7 +2953,7 @@
 			(uuid "3e9af6ea-3b81-4dd5-8bee-9c596d4384ba")
 		)
 		(instances
-			(project "vbt_kicad_pcb"
+			(project "vbt_kicad_pcb_TOUCHSCREEN"
 				(path "/7410dbc4-7d20-436b-9bb7-9ca64b6127ac/08ced4ac-dcde-4bd6-8803-f43fda8b2e55"
 					(reference "J5")
 					(unit 1)
@@ -3068,7 +3068,7 @@
 			(uuid "a4274d02-66c3-4da6-85d7-ad619ca289ea")
 		)
 		(instances
-			(project "vbt_kicad_pcb"
+			(project "vbt_kicad_pcb_TOUCHSCREEN"
 				(path "/7410dbc4-7d20-436b-9bb7-9ca64b6127ac/08ced4ac-dcde-4bd6-8803-f43fda8b2e55"
 					(reference "BT1")
 					(unit 1)
@@ -3150,7 +3150,7 @@
 			(uuid "f68796f4-004a-43a9-a90e-ae20c4ac3166")
 		)
 		(instances
-			(project "vbt_kicad_pcb"
+			(project "vbt_kicad_pcb_TOUCHSCREEN"
 				(path "/7410dbc4-7d20-436b-9bb7-9ca64b6127ac/08ced4ac-dcde-4bd6-8803-f43fda8b2e55"
 					(reference "R9")
 					(unit 1)
@@ -3229,7 +3229,7 @@
 			(uuid "a3b28ce5-78d9-434e-aa16-7ea8c319ec06")
 		)
 		(instances
-			(project "vbt_kicad_pcb"
+			(project "vbt_kicad_pcb_TOUCHSCREEN"
 				(path "/7410dbc4-7d20-436b-9bb7-9ca64b6127ac/08ced4ac-dcde-4bd6-8803-f43fda8b2e55"
 					(reference "#PWR014")
 					(unit 1)
@@ -3308,7 +3308,7 @@
 			(uuid "77ca0df8-0e17-408b-bab1-c2d3b9312226")
 		)
 		(instances
-			(project "vbt_kicad_pcb"
+			(project "vbt_kicad_pcb_TOUCHSCREEN"
 				(path "/7410dbc4-7d20-436b-9bb7-9ca64b6127ac/08ced4ac-dcde-4bd6-8803-f43fda8b2e55"
 					(reference "#PWR016")
 					(unit 1)
@@ -3393,7 +3393,7 @@
 			(uuid "53a63933-00f0-4c1f-ab7d-a79cef9a91e4")
 		)
 		(instances
-			(project "vbt_kicad_pcb"
+			(project "vbt_kicad_pcb_TOUCHSCREEN"
 				(path "/7410dbc4-7d20-436b-9bb7-9ca64b6127ac/08ced4ac-dcde-4bd6-8803-f43fda8b2e55"
 					(reference "J6")
 					(unit 1)
